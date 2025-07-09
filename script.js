@@ -63,13 +63,13 @@ function showSlide(index, direction) {
   const nextItem = items[index];
 
   currentItem.classList.remove('active');
-  currentItem.style.transform = `translateX(${direction > 0 ? '-100%' : '100%'})`; // sai pro lado oposto
+  currentItem.style.transform = `translateX(${direction > 0 ? '-100%' : '100%'})`; 
   currentItem.style.opacity = 0;
 
-  nextItem.style.transform = `translateX(${direction > 0 ? '100%' : '-100%'})`; // entra do lado correto
+  nextItem.style.transform = `translateX(${direction > 0 ? '100%' : '-100%'})`; 
   nextItem.style.opacity = 0;
 
-  // Força o navegador a aplicar o estilo antes de animar
+ 
   requestAnimationFrame(() => {
     nextItem.classList.add('active');
     nextItem.style.transform = 'translateX(0)';
@@ -83,10 +83,10 @@ function showSlide(index, direction) {
 
 document.getElementById('next').addEventListener('click', () => {
   let next = (current + 1) % items.length;
-  showSlide(next, 1); // direção direita
+  showSlide(next, 1);
 });
 
 document.getElementById('prev').addEventListener('click', () => {
   let prev = (current - 1 + items.length) % items.length;
-  showSlide(prev, -1); // direção esquerda
+  showSlide(prev, -1); 
 });
