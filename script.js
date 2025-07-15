@@ -90,3 +90,9 @@ document.getElementById('prev').addEventListener('click', () => {
   let prev = (current - 1 + items.length) % items.length;
   showSlide(prev, -1); 
 });
+
+//abre e fecha o menu
+function toggleMenu() {
+    const menu = document.getElementById("menuLateral");
+    menu.classList.toggle("aberto");
+  }

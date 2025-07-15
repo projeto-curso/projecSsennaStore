@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Senna Store</title>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="menu-amb">
+                <button>☰</button>
+
+            </div>
+            <div class="pesquisa">
+                <input type="search" name="" id="" placeholder="O que você procura?">
+                <button class="lupa">
+                    <img src="img/lup.png" alt="" class="">
+                </button>
+            </div>
+
+            <div class="logo">
+                <h1>Senna Store</1>
+            </div>
+
+            <div class="cep">
+                <img src="img/pin.png" alt="">
+                <p>Informe seu Cep</p>
+                <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+
+            </div>
+            <div class="login">
+                <img src="img/user1.png" alt="">
+                <p>Entrar</p>
+                <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+               
+            </div>
+
+            <div class="carrinho">
+                <button class="botao-carrinho"><img src="img/carrinho.png" alt="" class="img-icon"></button>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="grade">
+            <h2>Eletrodomésticos</h2>
+            <div class="secao-cards">
+            <div class="card">
+                <img src="img/maq-eletrolux.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Máquina de Lavar 15 kg Electrolux Essential Care (LED15) possui Cesto Inox</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/cooktop.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Cooktop 5 Bocas a Gás Electrolux Mesa Vidro</h2>
+                    <span><strong>R$ 999.00</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 999.00)">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/microondas.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Micro-ondas Electrolux 20L cor Inox Espelhado com Função Tira Odor (MT30S)</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+          <div class="card">
+                <img src="img/lava-louca.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Lava-Louças Electrolux 14 Serviços Preta Experience com Função Higienizar</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/geladeira.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Geladeira Electrolux Frost Free Inverter 480L Efficient AutoSense 3 Portas Branca</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+
+             <div class="secao-cards">
+            <div class="card">
+                <img src="img/efray.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Fritadeira Air Fryer 5,5L Cyclone Preto e Inox Midea</h2>
+                    <span><strong>R$ 450.00</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/ferro.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Ferro de Passar Roupa a Seco Mondial FSN-55-B - Preto</h2>
+                    <span><strong>R$ 79.00</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/liquid.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Liquidificador Mondial Turbo Power L-99 FB Preto com Filtro 3 Velocidades 550W</h2>
+                    <span><strong>R$ 99.00</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+          <div class="card">
+                <img src="img/frigobar.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Frigobar Brastemp Retrô 76 Litros Classic Black - BRA08HE</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/purificador.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Purificador de Água Midea de Mesa e Parede</h2>
+                    <span><strong>R$ 600.00</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Comprar</button>
+                </div>
+            </div>
+        </section>
+        <section class="grade">
+            <h2>Conheca Nossos Produtos de Informática</h2>
+             <div class="secao-cards">
+            <div class="card">
+                <img src="img/note2.png" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Notebook Lenovo IdeaPad 1i Intel Core i5 8GB RAM - SSD 512GB</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/tablet.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
+                    <span><strong>R$ 11.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/mackbook.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Apple Macbook Air 13” M3 16GB RAM 512GB SSD</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+          <div class="card">
+                <img src="img/dell2.png" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Notebook Dell Inspiron 16 Plus Intel Core Ultra 7 - 1TB SSD 16GB RAM </h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/monitor.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Monitor Gamer Rise Mode 32" 2K, 165hz, 1ms, IPS, Preto</h2>
+                    <span><strong>R$ 1.200</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 1.200)">Compre Agora</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="grade">
+            <h2>Tv e Video</h2>
+             <div class="secao-cards">
+            <div class="card">
+                <img src="img/tv-samsung.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Smart TV HD LED 32” Samsung T4300 - Wi-Fi HDR 2 HDMI 1 USB</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/tv-tcl.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Smart TV 32” Full HD LED TCL 32S5400A Android - Wi-Fi Bluetooth Google Assistente 2 HDMI 1 USB</h2>
+                    <span><strong>R$ 11.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/camera.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Câmera Sport Ultra HD 4K Wifi para Aventura e Filmagens - Ultra 4K A Prova D'gua Sport</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+          <div class="card">
+                <img src="img/playsttation.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>PlayStation 5 Pro 2024 2TB 1 Controle Branco Sony</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/xbox.webp" alt="arroz">
+                <div class="texto-produto">
+                    <h2>Console 360 Super Slim 4GB + 1 Jogo</h2>
+                    <span><strong>R$ 5.999</strong></span>
+                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                </div>
+            </div>
+
+        </section>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <nav class="nav">
+            <a href="">Home</a>
+            <a href="">produtos</a>
+            <a href="">Sobre Nós</a>
+        </nav>
+
+        <p>© 2025 Senna Dev - Todos os direitos reservados.</p>
+
+    </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
