@@ -15,7 +15,7 @@
     <header>
         <div class="cabecalho">
             <div class="menu-amb">
-                <button onclick="toggleMenu()">☰</button>
+                <button onclick="mostrarMenu()">☰</button>
 
             </div>
             <div class="pesquisa">
@@ -32,37 +32,51 @@
             <div class="cep">
                 <img src="img/pin.png" alt="">
                 <p>Informe seu Cep</p>
-                <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
+                <button onclick="buscarCep()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000">
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg></button>
             </div>
             <div class="login">
                 <img src="img/user1.png" alt="">
                 <p>Entrar</p>
-                <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></button>
-               
+                <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000">
+                        <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
+                    </svg></button>
+
             </div>
 
             <div class="carrinho">
-                <button class="botao-carrinho"><img src="img/carrinho.png" alt="" class="img-icon"></button>
+                <button class="botao-carrinho" onclick="abrirCarrinho()"><img src="img/carrinho.png" alt=""
+                        class="img-icon"></button>
+                <div class="contador" id="contador-carrinho">0</div>
             </div>
 
         </div>
 
     </header>
     <main>
-        <!-- <aside class="menu-lateral" id="menuLateral">
-            <h2>Categorias</h2>
-            <ul>
-                <li><a href="#mercearia">🛒 Mercearia</a></li>
-                <li><a href="#hortifruti">🍎 Hortifrúti</a></li>
-                <li><a href="#acougue">🥩 Açougue</a></li>
-                <li><a href="#padaria">🍞 Padaria</a></li>
-                <li><a href="#bebidas">🥤 Bebidas</a></li>
-                <li><a href="#limpeza">🧼 Limpeza</a></li>
-                 <li><a href="#perfumaria">🔥 Perfumaria</a></li>
-                <li><a href="#ofertas">🔥 Ofertas</a></li>
-            </ul>
-        </aside> -->
-    
+        <div class="menu-lateral" id="menu-lateral">
+            <h2>Menu</h2>
+            <button class="fechar-menu" onclick="fecharMenu()">X</button>
+            <nav class="nav-menu">
+                <h3>Smartphones</h3>
+                <a href="">Apple</a>
+                <a href="">Samsung</a>
+                <a href="">Redimi</a>
+                <a href="">Realme</a>
+
+                <h3>Games</h3>
+                <a href="">PlayStation</a>
+                <a href="">Xbox 360</a>
+                <a href="">xbon One</a>
+
+
+            </nav>
+
+        </div>
+
         <div class="container">
             <div class="list">
 
@@ -174,10 +188,10 @@
                 <a href="games.html">
                     <img src="img/games.webp" alt="">
                 </a>
-                <a href="">
+                <a href="audio.html">
                     <img src="img/audio.webp" alt="">
                 </a>
-                <a href="">
+                <a href="smartwatch.html">
                     <img src="img/smartwatches.webp" alt="">
                 </a>
                 <a href="">
@@ -186,7 +200,7 @@
                 <a href="">
                     <img src="img/tvs.webp" alt="">
                 </a>
-                <a href="">
+                <a href="informatica.html">
                     <img src="img/info.webp" alt="">
                 </a>
                 <a href="">
@@ -203,181 +217,206 @@
                 <!-- <a href="#produtos" class="botao-oferta">Ver ofertas</a> -->
             </div>
             <div class="secao-cards">
-            <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/tablet.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                <div class="card">
+                    <img src="img/tablet.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/celular-sam.png" alt="arroz">
-                <div class="texto-produto">
-                    <h2>CELULAR SAMSUNG GALAXY S24 FE SM S721B NFC DUAL SIM DE 512GB 8GB</h2>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                <div class="card">
+                    <img src="img/celular-sam.png" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>CELULAR SAMSUNG GALAXY S24 FE SM S721B NFC DUAL SIM DE 512GB 8GB</h2>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                    </div>
                 </div>
-            </div>
-          <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                    </div>
+
                 </div>
-                
-            </div>
         </section>
 
         <section class="grade">
             <h2>Smartphones</h2>
             <div class="secao-cards">
-            <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/tablet.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/tablet.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/celular-sam.png" alt="arroz">
-                <div class="texto-produto">
-                    <h2>CELULAR SAMSUNG GALAXY S24 FE SM S721B NFC DUAL SIM DE 512GB 8GB</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/celular-sam.png" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>CELULAR SAMSUNG GALAXY S24 FE SM S721B NFC DUAL SIM DE 512GB 8GB</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-          <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
         </section>
         <section class="grade">
             <h2>Notebooks e Tablets</h2>
-             <div class="secao-cards">
-            <div class="card">
-                <img src="img/note2.png" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+            <div class="secao-cards">
+                <div class="card">
+                    <img src="img/note2.png" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/tablet.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
-                    <span><strong>R$ 11.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/tablet.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Tablet Samsung Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</h2>
+                        <span><strong>R$ 11.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/mackbook.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple Macbook Air 13” M3 16GB RAM 512GB SSD</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/mackbook.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple Macbook Air 13” M3 16GB RAM 512GB SSD</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-          <div class="card">
-                <img src="img/dell2.png" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/dell2.png" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/iphone.jpg" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 16 128GB Rosa 6,1" 48MP iOS 5G</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
 
         </section>
         <section class="grade">
             <h2>Tv e Video</h2>
-             <div class="secao-cards">
-            <div class="card">
-                <img src="img/tv-samsung.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Smart TV HD LED 32” Samsung T4300 - Wi-Fi HDR 2 HDMI 1 USB</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+            <div class="secao-cards">
+                <div class="card">
+                    <img src="img/tv-samsung.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Smart TV HD LED 32” Samsung T4300 - Wi-Fi HDR 2 HDMI 1 USB</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/tv-tcl.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Smart TV 32” Full HD LED TCL 32S5400A Android - Wi-Fi Bluetooth Google Assistente 2 HDMI 1 USB</h2>
-                    <span><strong>R$ 11.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/tv-tcl.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Smart TV 32” Full HD LED TCL 32S5400A Android - Wi-Fi Bluetooth Google Assistente 2 HDMI 1
+                            USB</h2>
+                        <span><strong>R$ 11.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/camera.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Câmera Sport Ultra HD 4K Wifi para Aventura e Filmagens - Ultra 4K A Prova D'gua Sport</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/camera.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Câmera Sport Ultra HD 4K Wifi para Aventura e Filmagens - Ultra 4K A Prova D'gua Sport</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-          <div class="card">
-                <img src="img/playsttation.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>PlayStation 5 Pro 2024 2TB 1 Controle Branco Sony</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/playsttation.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>PlayStation 5 Pro 2024 2TB 1 Controle Branco Sony</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="img/xbox.webp" alt="arroz">
-                <div class="texto-produto">
-                    <h2>Console 360 Super Slim 4GB + 1 Jogo</h2>
-                    <span><strong>R$ 5.999</strong></span>
-                    <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                <div class="card">
+                    <img src="img/xbox.webp" alt="arroz">
+                    <div class="texto-produto">
+                        <h2>Console 360 Super Slim 4GB + 1 Jogo</h2>
+                        <span><strong>R$ 5.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    </div>
                 </div>
-            </div>
 
         </section>
 
+        <div class="carrinho-lateral" id="carrinho">
+            <button class="fechar" onclick="fecharCarrinho()">X</button>
+            <h2>Meu Carrinho</h2>
+
+            <div id="itens-carrinho"></div>
+
+            <div class="total" id="total">Total:</div>
+
+            <div class="botoes">
+
+                <button class="finalizar" onclick="finalizar()">Finalizar Compra</button>
+
+                <button class="remove" id="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+            </div>
 
         </div>
+
+        <div class="buscar-cep" id="buscarCep">
+            <h2>buscar cep</h2>
+            <button onclick="fecharCep()">X</button>
+            <form action="">
+                <input type="number" name="" id="">
+            </form>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vero aut accusantium dignissimos nemo dolore, amet odit tenetur quas molestiae voluptatum dolorum voluptas obcaecati! Tempore blanditiis adipisci pariatur quaerat tempora!</p>
+        </div>
+
     </main>
 
     <footer>

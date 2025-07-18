@@ -63,13 +63,13 @@ function showSlide(index, direction) {
   const nextItem = items[index];
 
   currentItem.classList.remove('active');
-  currentItem.style.transform = `translateX(${direction > 0 ? '-100%' : '100%'})`; 
+  currentItem.style.transform = `translateX(${direction > 0 ? '-100%' : '100%'})`;
   currentItem.style.opacity = 0;
 
-  nextItem.style.transform = `translateX(${direction > 0 ? '100%' : '-100%'})`; 
+  nextItem.style.transform = `translateX(${direction > 0 ? '100%' : '-100%'})`;
   nextItem.style.opacity = 0;
 
- 
+
   requestAnimationFrame(() => {
     nextItem.classList.add('active');
     nextItem.style.transform = 'translateX(0)';
@@ -88,11 +88,115 @@ document.getElementById('next').addEventListener('click', () => {
 
 document.getElementById('prev').addEventListener('click', () => {
   let prev = (current - 1 + items.length) % items.length;
-  showSlide(prev, -1); 
+  showSlide(prev, -1);
 });
 
-//abre e fecha o menu
-function toggleMenu() {
-    const menu = document.getElementById("menuLateral");
-    menu.classList.toggle("aberto");
-  }
+
+  // menu lateral
+function mostrarMenu() {
+  document.getElementById('menu-lateral').classList.toggle('mostrar');
+
+}  
+
+function fecharMenu() {
+  document.getElementById('menu-lateral').classList.remove('mostrar');
+}
+
+function buscarCep() {
+   document.getElementById('buscarCep').classList.toggle('cep-aberto');
+
+}
+
+function fecharCep(){
+  document.getElementById('buscarCep').classList.remove('cep-aberto');
+
+}
+
+
+
+//codigo carrinho compras
+
+function adicionarAoCarrinho(nome, preco) {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  carrinho.push({ nome, preco });
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  atualizarContador();
+  alert(`${nome} foi adicionado ao carrinho!`);
+
+}
+
+function atualizarContador() {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  document.getElementById('contador-carrinho').textContent = carrinho.length;
+}
+
+function abrirCarrinho() {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  const container = document.getElementById('itens-carrinho');
+
+  container.innerHTML = carrinho.map((item, index) => `
+    <div class="item-carrinho">
+      <strong>${item.nome}</strong><br>
+      R$ ${item.preco.toFixed(2)}
+      <button onclick="removerItem(${index})">X</button>
+    </div>
+  `).join('');
+
+  document.getElementById('carrinho').classList.add('aberto');
+
+}
+
+function fecharCarrinho() {
+  document.getElementById('carrinho').classList.remove('aberto');
+}
+
+function finalizar() {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  const tot = document.getElementById('total');
+
+  const total = carrinho.reduce((soma, item) => {
+    const preco = parseFloat(item.preco) || 0;
+    const quantidade = parseInt(item.quantidade) || 1;
+
+    return soma + (preco * quantidade);
+  }, 0);
+
+  tot.innerHTML = `Total R$ ${total.toFixed(2)}`;
+
+
+
+  atualizarContador();
+}
+
+const toggle = document.getElementById("menu");
+
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+
+  nav.classList.toggle("show");
+});
+
+function limparCarrinho() {
+  localStorage.removeItem('carrinho');
+  atualizarContador();
+  document.getElementById('itens-carrinho').innerHTML = '';
+  document.getElementById('total').innerHTML = 'R$ 0,00';
+
+}
+
+function removerItem(index) {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  carrinho.splice(index, 1);
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+  abrirCarrinho();
+  atualizarContador();
+}
+
+// function toggleMenu() {
+//   const menu = document.getElementById("menuLateral");
+//   menu.classList.toggle("aberto");
+// }
+
+
