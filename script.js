@@ -1,59 +1,32 @@
-// const prevButton = document.getElementById('prev')
-// const nextButton = document.getElementById('next')
-// const items = document.querySelectorAll('.item')
-// const dots = document.querySelectorAll('.dot')
-// const numberIndicator = document.querySelector('.numbers')
-// const list = document.querySelector('.list')
+// menu lateral
+function mostrarMenu() {
+  document.getElementById('menu-lateral').classList.toggle('mostrar');
 
+}
 
-// let active = 0;
-// const total = items.length
-// let timer;
+function fecharMenu() {
+  document.getElementById('menu-lateral').classList.remove('mostrar');
+}
 
+function buscarCep() {
+  document.getElementById('card-cep').classList.toggle('aberto');
 
-// function update(direction) {
+}
 
-//     document.querySelector('.item.active').classList.remove('active')
-//     document.querySelector('.dot.active').classList.remove('active')
+function fecharCep() {
+  document.getElementById('card-cep').classList.remove('aberto');
 
+}
 
-//     if (direction > 0) {
-//         active = active + 1
-//         if (active === total) {
-//             active = 0
-//         }
-//     }
+function abrirLogin() {
+  document.getElementById('overlay').classList.add('active');
+}
 
-//     else if (direction < 0) {
-//         active = active - 1
+function fecharLogin() {
+  document.getElementById('overlay').classList.remove('active');
+}
 
-//         if (active < 0) {
-//             active = total - 1
-//         }
-
-//     }
-
-//     items[active].classList.add('active')
-//     dots[active].classList.add('active')
-
-//     numberIndicator.textContent = String(active + 1).padStart(2, '0')
-// }
-// clearInterval(timer)
-// timer = setInterval(() => {
-//     update(1)
-// }, 5000);
-
-
-
-// prevButton.addEventListener('click', () => {
-//     update(-1)
-
-// })
-
-// nextButton.addEventListener('click', () => {
-//     update(1)
-// })
-
+  //  codigo banner carrocel
 let current = 0;
 const items = document.querySelectorAll('.item');
 const dots = document.querySelectorAll('.dot');
@@ -90,29 +63,6 @@ document.getElementById('prev').addEventListener('click', () => {
   let prev = (current - 1 + items.length) % items.length;
   showSlide(prev, -1);
 });
-
-
-  // menu lateral
-function mostrarMenu() {
-  document.getElementById('menu-lateral').classList.toggle('mostrar');
-
-}  
-
-function fecharMenu() {
-  document.getElementById('menu-lateral').classList.remove('mostrar');
-}
-
-function buscarCep() {
-   document.getElementById('buscarCep').classList.toggle('cep-aberto');
-
-}
-
-function fecharCep(){
-  document.getElementById('buscarCep').classList.remove('cep-aberto');
-
-}
-
-
 
 //codigo carrinho compras
 
@@ -172,11 +122,6 @@ const toggle = document.getElementById("menu");
 
 const nav = document.getElementById("nav");
 
-toggle.addEventListener("click", () => {
-
-  nav.classList.toggle("show");
-});
-
 function limparCarrinho() {
   localStorage.removeItem('carrinho');
   atualizarContador();
@@ -194,9 +139,60 @@ function removerItem(index) {
   atualizarContador();
 }
 
-// function toggleMenu() {
-//   const menu = document.getElementById("menuLateral");
-//   menu.classList.toggle("aberto");
+// const prevButton = document.getElementById('prev')
+// const nextButton = document.getElementById('next')
+// const items = document.querySelectorAll('.item')
+// const dots = document.querySelectorAll('.dot')
+// const numberIndicator = document.querySelector('.numbers')
+// const list = document.querySelector('.list')
+
+
+// let active = 0;
+// const total = items.length
+// let timer;
+
+
+// function update(direction) {
+
+//     document.querySelector('.item.active').classList.remove('active')
+//     document.querySelector('.dot.active').classList.remove('active')
+
+
+//     if (direction > 0) {
+//         active = active + 1
+//         if (active === total) {
+//             active = 0
+//         }
+//     }
+
+//     else if (direction < 0) {
+//         active = active - 1
+
+//         if (active < 0) {
+//             active = total - 1
+//         }
+
+//     }
+
+//     items[active].classList.add('active')
+//     dots[active].classList.add('active')
+
+//     numberIndicator.textContent = String(active + 1).padStart(2, '0')
 // }
+// clearInterval(timer)
+// timer = setInterval(() => {
+//     update(1)
+// }, 5000);
+
+
+
+// prevButton.addEventListener('click', () => {
+//     update(-1)
+
+// })
+
+// nextButton.addEventListener('click', () => {
+//     update(1)
+// })
 
 

@@ -16,7 +16,6 @@
         <div class="cabecalho">
             <div class="menu-amb">
                 <button onclick="mostrarMenu()">☰</button>
-
             </div>
             <div class="pesquisa">
                 <input type="search" name="" id="" placeholder="O que você procura?">
@@ -40,8 +39,8 @@
             <div class="login">
                 <img src="img/user1.png" alt="">
                 <p>Entrar</p>
-                <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#000">
+                <button onclick="abrirLogin()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#000">
                         <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
                     </svg></button>
 
@@ -55,28 +54,50 @@
 
         </div>
 
+
     </header>
-    <main>
+    <main>  
+             <!-- menu lateral  -->
         <div class="menu-lateral" id="menu-lateral">
-            <h2>Menu</h2>
-            <button class="fechar-menu" onclick="fecharMenu()">X</button>
-            <nav class="nav-menu">
-                <h3>Smartphones</h3>
-                <a href="">Apple</a>
-                <a href="">Samsung</a>
-                <a href="">Redimi</a>
-                <a href="">Realme</a>
+        <h2>Menu</h2>
+        <button class="fechar-menu" onclick="fecharMenu()">X</button>
+        <nav class="nav-menu">
+            <h3>Smartphones</h3>
+            <hr>
+            <a href="">Apple</a> 
+            <a href="">Samsung</a>
+            <a href="">Redimi</a>
+            <a href="">Realme</a>
 
-                <h3>Games</h3>
-                <a href="">PlayStation</a>
-                <a href="">Xbox 360</a>
-                <a href="">xbon One</a>
+            <h3>Games</h3>
+            <a href="">PlayStation</a>
+            <a href="">Xbox 360</a>
+            <a href="">xbon One</a>
 
+            <h3>Smartphones</h3>
+            <a href="">Apple</a>
+            <a href="">Samsung</a>
+            <a href="">Redimi</a>
+            <a href="">Realme</a>
 
-            </nav>
+            <h3>Games</h3>
+            <a href="">PlayStation</a>
+            <a href="">Xbox 360</a>
+            <a href="">xbon One</a>
 
-        </div>
+            <h3>Smartphones</h3>
+            <a href="">Apple</a>
+            <a href="">Samsung</a>
+            <a href="">Redimi</a>
+            <a href="">Realme</a>
 
+            <h3>Games</h3>
+            <a href="">PlayStation</a>
+            <a href="">Xbox 360</a>
+            <a href="">xbon One</a>
+        </nav>
+
+    </div>
         <div class="container">
             <div class="list">
 
@@ -390,34 +411,57 @@
                 </div>
 
         </section>
-
-        <div class="carrinho-lateral" id="carrinho">
-            <button class="fechar" onclick="fecharCarrinho()">X</button>
-            <h2>Meu Carrinho</h2>
-
-            <div id="itens-carrinho"></div>
-
-            <div class="total" id="total">Total:</div>
-
-            <div class="botoes">
-
-                <button class="finalizar" onclick="finalizar()">Finalizar Compra</button>
-
-                <button class="remove" id="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
-            </div>
-
-        </div>
-
-        <div class="buscar-cep" id="buscarCep">
-            <h2>buscar cep</h2>
-            <button onclick="fecharCep()">X</button>
-            <form action="">
-                <input type="number" name="" id="">
-            </form>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vero aut accusantium dignissimos nemo dolore, amet odit tenetur quas molestiae voluptatum dolorum voluptas obcaecati! Tempore blanditiis adipisci pariatur quaerat tempora!</p>
-        </div>
-
     </main>
+    
+
+    <!-- secões menu e carrinho responsivos -->
+    <div class="carrinho-lateral" id="carrinho">
+        <button class="fechar" onclick="fecharCarrinho()">X</button>
+        <h2>Meu Carrinho</h2>
+
+        <div id="itens-carrinho"></div>
+
+        <div class="total" id="total">Total:</div>
+
+        <div class="botoes">
+
+            <button class="finalizar" onclick="finalizar()">Finalizar Compra</button>
+
+            <button class="remove" id="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+
+    </div>
+
+    <div class="card-cep" id="card-cep">
+        <div class="buscar-cep">
+            <button class="fechar-cep" onclick="fecharCep()">X</button>
+            <div class="form-cep" action="">
+                <h2>Sua localizacão</h2>
+                <label for="">Informe seu Cep</label>
+                <input type="number" placeholder="Qual seu cep?">
+                <button class="buscarCep">Buscar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- secao login -->
+    <div class="overlay" id="overlay">
+        <div class="login-card">
+            <button onclick="fecharLogin()" class="botao-fechar">X</button>
+            <div class="form">
+                <h2>Login</h2>
+                <label for="">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email">
+                <label for="">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua Senha">
+                <button class="botao-entrar">Entrar</button>
+                <a href="">Não tem Cadastro?</a>
+
+            </div>
+        </div>
+    </div>
+
+    
 
     <footer>
         <nav class="nav">
