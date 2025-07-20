@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Lateral</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      width: 300px;
+      height: 100vh;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #34495e;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .menu-item:hover {
+      background-color: #3e5871;
+    }
+
+    .menu-item span {
+      font-size: 16px;
+    }
+
+    .menu-item i {
+      font-style: normal;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar" id="menu">
+    <!-- Itens vão ser inseridos aqui -->
+  </div>
+
+  <script>
+    const menuItems = ['Dashboard', 'Clientes', 'Relatórios', 'Configurações', 'Sair'];
+
+    const menu = document.getElementById('menu');
+
+    menuItems.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'menu-item';
+      div.innerHTML = `<span>${item}</span><button><img src="img/iconright.png" width="19"></button>`;
+      menu.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>

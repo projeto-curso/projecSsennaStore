@@ -2,6 +2,17 @@
 function mostrarMenu() {
   document.getElementById('menu-lateral').classList.toggle('mostrar');
 
+  const itemMenu = ['Smartphones', 'Tablet', 'Games', 'Informatica', 'Eletrodomésticos', 'Salão', 'Tv e Video', 'Smartwatches', 'Áudio', 'Smartphones', 'Tablet', 'Games', 'Informatica', 'Eletrodomésticos', 'Salão', 'Tv e Video', 'Smartwatches', 'Áudio'];
+
+  const menu = document.getElementById('menu');
+
+  itemMenu.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'item-menu';
+    div.innerHTML = `<span>${item}</span><button><img src="img/iconright.png"</button>`
+    menu.appendChild(div);
+  })
+
 }
 
 function fecharMenu() {
