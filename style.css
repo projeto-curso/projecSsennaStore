@@ -420,10 +420,11 @@ button {
     border-radius: 10px;
     text-align: center;
     /* overflow: hidden; */
+   
 
 
     img {
-        width: 120px;
+        width: 100px;
         object-fit: cover;
     }
 
@@ -617,6 +618,11 @@ footer {
     display: inline-block;
     overflow-y: auto;
 
+    a {
+       
+        font-size: 15px;
+    }
+
 }
 
 .menu-lateral::-webkit-scrollbar {
@@ -656,6 +662,8 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    text-decoration: none;
+    color: black;
 
 }
 

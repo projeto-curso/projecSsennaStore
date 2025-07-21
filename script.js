@@ -2,17 +2,57 @@
 function mostrarMenu() {
   document.getElementById('menu-lateral').classList.toggle('mostrar');
 
-  const itemMenu = ['Smartphones', 'Tablet', 'Games', 'Informatica', 'Eletrodomésticos', 'Salão', 'Tv e Video', 'Smartwatches', 'Áudio', 'Smartphones', 'Tablet', 'Games', 'Informatica', 'Eletrodomésticos', 'Salão', 'Tv e Video', 'Smartwatches', 'Áudio'];
+ const itemMenu = [
+  { nome: 'Smartphones', link: 'smartphones.html' },
+  { nome: 'Tablet', link: 'tablet.html' },
+  { nome: 'Games', link: 'games.html' },
+  { nome: 'Informatica', link: 'informatica.html' },
+  { nome: 'Eletrodomésticos', link: 'eletrodomesticos.html' },
+  { nome: 'Salão', link: 'salao.html' },
+  { nome: 'Tv e Video', link: 'tv-video.html' },
+  { nome: 'Smartwatches', link: 'smartwatches.html' },
+  { nome: 'Áudio', link: 'audio.html' }
+];
 
-  const menu = document.getElementById('menu');
+// Pega o menu do HTML
+const menu = document.getElementById('menu');
 
-  itemMenu.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'item-menu';
-    div.innerHTML = `<span>${item}</span><button><img src="img/iconright.png"</button>`
-    menu.appendChild(div);
-  })
+// Cria cada botão com link
+itemMenu.forEach(item => {
+  const a = document.createElement('a');  // cria uma tag <a>
+  a.href = item.link;                     // define o link do item
+  a.className = 'item-menu';              // classe para estilizar
+  a.innerHTML = `
+    <span>${item.nome}</span>
+    <button><img src="img/iconright.png" alt=""></button>
+  `;
+  menu.appendChild(a); // adiciona no menu
+});
 
+const itemMarca = [
+  { nome: 'Apple', link: 'smartphones.html' },
+  { nome: 'Samsung', link: 'smartwatches.html' },
+  { nome: 'Redimi', link: 'smartphones.html' },
+  { nome: 'Motorola', link: 'smartphones.html' },
+  { nome: 'LG', link: 'smartphones.html' },
+  { nome: 'Lenovo', link: 'smartphones.html' },
+  { nome: 'Dell', link: 'informatica.html' },
+  { nome: 'Eletrolux', link: 'eletrodomesticos.html' }
+
+];
+const marca = document.getElementById('marca');
+
+// Cria cada botão com link
+itemMarca.forEach(ite => {
+  const a = document.createElement('a');  // cria uma tag <a>
+  a.href = ite.link;                     // define o link do item
+  a.className = 'item-menu';              // classe para estilizar
+  a.innerHTML = `
+    <span>${ite.nome}</span>
+    <button><img src="img/iconright.png" alt=""></button>
+  `;
+  marca.appendChild(a);
+});
 }
 
 function fecharMenu() {
