@@ -37,6 +37,7 @@ const itemMarca = [
   { nome: 'LG', link: 'smartphones.html' },
   { nome: 'Lenovo', link: 'smartphones.html' },
   { nome: 'Dell', link: 'informatica.html' },
+  { nome: 'Mondial', link: 'informatica.html' },
   { nome: 'Eletrolux', link: 'eletrodomesticos.html' }
 
 ];
@@ -70,11 +71,11 @@ function fecharCep() {
 }
 
 function abrirLogin() {
-  document.getElementById('overlay').classList.add('active');
+  document.getElementById('card-login').classList.add('active');
 }
 
 function fecharLogin() {
-  document.getElementById('overlay').classList.remove('active');
+  document.getElementById('card-login').classList.remove('active');
 }
 
   //  codigo banner carrocel
