@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Busca Dinâmica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .produto {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .produto h3 {
+      margin: 0 0 5px;
+    }
+
+    .produto p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Buscar Produtos</h2>
+  <input type="text" id="searchInput" placeholder="Digite o nome do produto...">
+
+  <div id="produtosContainer"></div>
+
+  <script>
+    // Simulando produtos vindos do banco de dados
+    const produtos = [
+      { nome: "Camisa Azul", descricao: "Camisa de algodão tamanho M" },
+      { nome: "Calça Jeans", descricao: "Jeans escuro com bolso" },
+      { nome: "Relógio Esportivo", descricao: "Resistente à água" },
+      { nome: "Tênis Corrida", descricao: "Leve e confortável" },
+      { nome: "Óculos de Sol", descricao: "Proteção UV400" },
+      { nome: "Boné Preto", descricao: "Ajustável e estiloso" },
+      { nome: "Jaqueta de Couro", descricao: "Modelo biker" }
+    ];
+
+    const container = document.getElementById("produtosContainer");
+    const input = document.getElementById("searchInput");
+
+    function exibirProdutos(lista) {
+      container.innerHTML = "";
+      if (lista.length === 0) {
+        container.innerHTML = "<p>Nenhum produto encontrado.</p>";
+        return;
+      }
+      lista.forEach(produto => {
+        const div = document.createElement("div");
+        div.className = "produto";
+        div.innerHTML = `
+          <h3>${produto.nome}</h3>
+          <p>${produto.descricao}</p>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    input.addEventListener("input", () => {
+      const termo = input.value.toLowerCase();
+      const filtrados = produtos.filter(p =>
+        p.nome.toLowerCase().includes(termo) ||
+        p.descricao.toLowerCase().includes(termo)
+      );
+      exibirProdutos(filtrados);
+    });
+
+    // Exibir todos ao carregar
+    exibirProdutos(produtos);
+  </script>
+
+</body>
+</html>

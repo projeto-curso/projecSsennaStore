@@ -5,6 +5,7 @@ function mostrarMenu() {
  const itemMenu = [
   { nome: 'Smartphones', link: 'smartphones.html' },
   { nome: 'Tablet', link: 'tablet.html' },
+  { nome: 'Notebooks', link: 'notebooks.html' },
   { nome: 'Games', link: 'games.html' },
   { nome: 'Informatica', link: 'informatica.html' },
   { nome: 'Eletrodomésticos', link: 'eletrodomesticos.html' },
@@ -60,13 +61,30 @@ function fecharMenu() {
   document.getElementById('menu-lateral').classList.remove('mostrar');
 }
 
-function buscarCep() {
-  document.getElementById('card-cep').classList.toggle('aberto');
+function mostrarCep() {
+  document.getElementById('fundo-cep').classList.toggle('aberto');
+  
+
+}
+
+async function buscarCep() {
+  let cep = document.getElementById('txt-cep').value
+  let res = document.getElementById('res')
+
+  const URL = 'https://brasilapi.com.br/api/cep/v1/'
+
+  let response = await fetch(URL + cep)
+
+  let data = await response.json()
+
+  res.innerHTML = `${data.street},<br> ${data.neighborhood},<br>  ${data.city}-${data.state}
+
+`
 
 }
 
 function fecharCep() {
-  document.getElementById('card-cep').classList.remove('aberto');
+  document.getElementById('fundo-cep').classList.remove('aberto');
 
 }
 
@@ -117,7 +135,6 @@ document.getElementById('prev').addEventListener('click', () => {
 });
 
 //codigo carrinho compras
-
 function adicionarAoCarrinho(nome, preco) {
   let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
   carrinho.push({ nome, preco });

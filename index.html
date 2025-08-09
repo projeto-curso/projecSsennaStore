@@ -7,6 +7,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>Senna Store</title>
 </head>
@@ -32,7 +34,7 @@
             <div class="cep">
                 <img src="img/pin.png" alt="">
                 <p>Informe seu Cep</p>
-                <button onclick="buscarCep()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                <button onclick="mostrarCep()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
                         viewBox="0 -960 960 960" width="24px" fill="#000">
                         <path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z" />
                     </svg></button>
@@ -62,20 +64,20 @@
         <div class="menu-lateral" id="menu-lateral">
             <div class="topo-menu"><a href="">Faça seu login</a>
 
-            <button class="fechar-menu" onclick="fecharMenu()">X</button>
+                <button class="fechar-menu" onclick="fecharMenu()">X</button>
             </div>
-        
+
             <div class="btn-men">
                 <button><a href="">AirPods</a></button>
                 <button><a href="smartphones.html">Smartphones</a></button>
                 <button><a href="games.html">Games</a></button>
-                <button><a href="informatica.html">Notebooks</a></button>
+                <button><a href="notebooks.html">Notebooks</a></button>
                 <button><a href="informatica.html">Tablet</a></button>
                 <button><a href="audio.html">Áudio</a></button>
                 <button><a href="smartwatch.html">Smartwatches</a></button>
                 <button><a href="salao.html">Salão</a></button>
                 <button><a href="eletrodomesticos.html">Eletrodomésticos</a></button>
-                <button><a href=tv-video.html">TVs</a></button>
+                <button><a href="tv-video.html">TVs</a></button>
             </div>
             <div class="nav-menu" id="menu">
                 <hr>
@@ -124,7 +126,7 @@
                 </div>
                 <div class="item">
                     <div class="product-img">
-                        <img src="img/vision1.png" alt="vision">
+                        <img src="img/games/vision1.png" alt="vision">
                     </div>
                     <div class="content">
                         <p class="product-tag">Alta Performace</p>
@@ -140,12 +142,44 @@
 
                 <div class="item">
                     <div class="product-img">
-                        <img src="img/note2.png" alt="airpods">
+                        <img src="img/notes-tablete/note2.png" alt="notebook">
                     </div>
                     <div class="content">
                         <p class="product-name">Notebook Lenovo IdeaPad 1i</p>
                         <p class="description">
                             Intel Core i3 4GB RAM - 256GB SSD 15,6
+                        </p>
+                        <button class="btn">Saiba Mais </button>
+
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/tvs/tv-promo85.png" alt="tv">
+                    </div>
+                    <div class="content">
+                        <p class="product-name">Smart TV 85” 4K UHD LED Samsung </p>
+                        <p class="description">
+                            A Smart TV Samsung Crystal UHD 85DU8000 de 85" é a escolha ideal para quem busca uma TV de
+                            alta qualidade com imagem e som impecáveis.
+                        </p>
+                        <button class="btn">Saiba Mais </button>
+
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="product-img">
+                        <img src="img/games/playsttation.png" alt="playsttation">
+                    </div>
+                    <div class="content">
+                        <p class="product-name">Console PlayStation 5 Pro Sony</p>
+                        <p class="description">
+                            Com o console PlayStation 5 Pro Branco 2024 da Sony, os maiores criadores de jogos do mundo
+                            podem melhorar seus jogos com recursos incríveis
                         </p>
                         <button class="btn">Saiba Mais </button>
 
@@ -177,24 +211,22 @@
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
-
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-
             </div>
-
         </div>
-
         <section class="grade">
             <h2>Navegue por Categorias</h2>
             <div class="nav-categorias">
                 <a href="smartphones.html">
-                    <img src="img/celulares.webp" alt="">
+                    <img src="img/smartphones/celulares.webp" alt="">
                 </a>
                 <a href="eletrodomesticos.html">
-                    <img src="img/eletro.webp" alt="">
+                    <img src="img/eletrodomesticos/eletro.webp" alt="">
                 </a>
                 <a href="games.html">
-                    <img src="img/games.webp" alt="">
+                    <img src="img/games/games.webp" alt="">
                 </a>
                 <a href="audio.html">
                     <img src="img/audio.webp" alt="">
@@ -206,7 +238,7 @@
                     <img src="img/beleza.webp" alt="">
                 </a>
                 <a href="">
-                    <img src="img/tvs.webp" alt="">
+                    <img src="img/tvs/tvs.webp" alt="">
                 </a>
                 <a href="informatica.html">
                     <img src="img/info.webp" alt="">
@@ -224,198 +256,647 @@
                 <p>Descontos imperdíveis em celulares, notebooks e smart TVs</p>
                 <!-- <a href="#produtos" class="botao-oferta">Ver ofertas</a> -->
             </div>
+        </section>
+
+        <section class="grade">
             <div class="secao-cards">
                 <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/tvs/smart-tv85.webp" alt="smart tv">
+                    </div>
                     <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                        <h2>Smart TV 85"</h2>
+                        <p>4K UHD QLED Mini LED TCL 85C755 120Hz Wi-Fi Bluetooth 4 HDMI 2 USB</p>
+                        <p>De <s>R$ 12.299,00</s> Por</p>
+                        <span><strong>R$ 11.679,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV 85', 11.679)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphoneMeiaNoite.png" alt="iphone">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Apple iPhone 14</h2>
+                        <p>128GB Meia-Noite,Tela de 6,1" 5G</p>
+                        <p>de <s>R$ 4.899,00</s> Por</p>
+                        <span><strong>R$ 3.999</strong></span>
+                        <button onclick="adicionarAoCarrinho('Apple iPhone 14', 3.999)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/tablet.webp" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/notes-tablete/tablet.webp" alt="tablet samsung">
+                    </div>
                     <div class="texto-produto">
                         <h2>Tablet Samsung</h2>
                         <p>Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</p>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                        <p>de <s>R$ 1.699,00</s> Por</p>
+                        <span><strong>R$ 1.199,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Tablet Samsung', 1.199)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/celular-sam.png" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/notes-tablete/dell2.png" alt="Notebook dell">
+                    </div>
                     <div class="texto-produto">
-                        <h2>SAMSUNG GALAXY S24</h2>
-                        <p>FE SM S721B NFC DUAL SIM DE 512GB 8GB</p>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                        <h2>Dell Inspiron 15 </h2>
+                        <p>Notebook Intel Core i5 16GB RAM SSD 1TB 15,6" Windows 11 12MB</p>
+                        <p>De <s>R$ 4.599,00</s> Por</p>
+                        <span><strong>R$ 4.139,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Dell', 4.139)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphon-rosa.webp" alt="iphone 16">
+                    </div>
                     <div class="texto-produto">
                         <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
+                        <p>Camra Dupla de 48MP 256GB, Rosa 6,1" iOS 5G</p>
+                        <p>de <s>R$ 7.899,00</s> Por</p>
+                        <span><strong>R$ 6.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Iphone 16 Rosa', 6.999)">Ver Ofertas</button>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Ver Ofertas</button>
-                    </div>
-
-                </div>
+            </div>
         </section>
 
         <section class="grade">
             <h2>Smartphones</h2>
             <div class="secao-cards">
                 <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphoneMeiaNoite.png" alt="iphone 14">
+                    </div>
                     <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('apple iphone', 5.999)">Compre Agora</button>
+                        <h2>Apple iPhone 14</h2>
+                        <p>128GB Meia-Noite,Tela de 6,1" 5G e Câmera de 12MP</p>
+                        <p>de <s>R$ 4.899,00</s> Por</p>
+                        <span><strong>R$ 3.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Apple iPhone 14', 3.999)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/tablet.webp" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/redimi14.png" alt="redimi note 14">
+                    </div>
                     <div class="texto-produto">
-                        <h2>Tablet Samsung Galaxy</h2>
-                        <p>tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                        <h2>Redmi Note 14 Pro</h2>
+                        <p>8GB RAM 256GB Dual Sim Tela 6.67 Global</p>
+                        <p>De <s>R$ 2.899,00</s> Por</p>
+                        <span><strong>R$ 2.399,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Redmi Note 14 Pro', 2.399)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/celular-sam.png" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/poco.webp" alt="poco x7">
+                    </div>
                     <div class="texto-produto">
-                        <h2>SAMSUNG GALAXY S24</h2>
-                        <p>SM S721B NFC DUAL SIM DE 512GB 8GB</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                        <h2>Poco X7 Pro</h2>
+                        <p>Xiaomi - 5G 512GB 12GB Ram, Tela 6,67 polegadas AMOLED</p>
+                        <p>De <s>R$ 2.899,00</s> Por</p>
+                        <span><strong>R$ 2.500,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Poco X7 Pro', 2.500)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphonne16-azul.webp" alt="iphone 16">
+                    </div>
                     <div class="texto-produto">
-                        <h2>IPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                        <h2>iPhone 16 Apple</h2>
+                        <p>Ultramarino, 128GB Tela de 6,1", 5G e Câmera de 48 MP i</p>
+                        <p>De <s>R$ 7.899,00</s> Por</p>
+                        <span><strong>R$ 6.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('iPhone 16 Apple (128GB)', 6.999)">Comprar</button>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphone16E-branco.webp" alt="iphone 16e">
                     </div>
-                </div>
-        </section>
-        <section class="grade">
-            <h2>Notebooks e Tablets</h2>
-            <div class="secao-cards">
-                <div class="card">
-                    <img src="img/note2.png" alt="arroz">
                     <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/tablet.webp" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Tablet Samsung</h2>
-                        <p>Galaxy Tab A9, tela de 8,7", 64 GB, 4 GB de RAM, cor cinza</p>
-                        <span><strong>R$ 11.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/mackbook.webp" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Apple Macbook</h2>
-                        <p>Air 13” M3 16GB RAM 512GB SSD</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/dell2.png" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Apple iPhone 16 1</h2>
-                        <p>28GB Rosa 6,1" 48MP iOS 5G</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/iphone.jpg" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Apple iPhone 16</h2>
-                        <p>128GB Rosa 6,1" 48MP iOS 5G</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                        <h2>iPhone 16e Apple</h2>
+                        <p>256GB, Tela de 6,1", 5G e Câmera de 48 MP - Branco</p>
+                        <p>De <s>R$ 8.699,00</s> Por</p>
+                        <span><strong>R$ 7.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('iPhone 16e Apple (256GB) Branco', 7.999)">Comprar</button>
                     </div>
                 </div>
 
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphone15.png" alt="iphone 15">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>iPhone 15</h2>
+                        <p>Apple 128GB, Tela de 6,1", 5G e Câmera de 48 MP - Preto</p>
+                        <p>De <s>R$ 4.999,00</s> Por</p>
+                        <span><strong>R$ 4.699,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('iPhone 15 Apple (128GB)', 4.699)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphone15rosa.webp" alt="iphone 15">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>iPhone 15</h2>
+                        <p>Apple 128GB Tela de 6,1", 5G e Câmera de 48 MP Rosa</p>
+                        <p>De <s>R$ 6.599,00</s> Por</p>
+                        <span><strong>R$ 5.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('iPhone 15 Apple (128GB) Rosa', 5.999)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/celular-sam.png" alt="galaxy s24">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Galaxxy S24</h2>
+                        <p>DUAL SIM DE 512GB Cinza - Samsung</p>
+                        <p>De <s>R$ 6.599,00</s> Por</p>
+                        <span><strong>R$ 5.799,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('CELULAR SAMSUNG GALAXY S24', 5.799)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/samsung-A16.png" alt="galaxy a16">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Samsung Galaxy A16 5G</h2>
+                        <p>Tela Super AMOLED de 6.7 Cinza + Galaxy Fit3</p>
+                        <p>De <s>R$ 2.199,00</s> Por</p>
+                        <span><strong>R$ 1.600,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Samsung Galaxy A16 5G', 1.600)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/galaxyA15.png" alt="galaxy a15">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Galaxy A15</h2>
+                        <p>256GB, 8GB de RAM e Câmera Tripla de 50MP</p>
+                        <p>De <s>R$ 1.299,00</s> Por</p>
+                        <span><strong>R$ 999.00</strong></span>
+                        <button
+                            onclick="adicionarAoCarrinho('Samsung Galaxy A15 5G Azul Claro', 999.00)">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/motoEdge.png" alt="motorola edge">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Motorola Edge 40</h2>
+                        <p>Neo 5G 256GB 8GB RAM - Caneel Bay - Vegan Leather</p>
+                        <p>De <s>R$ 1.399,00</s> Por</p>
+                        <span><strong>R$ 1.299,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smartphone Motorola Edge 40', 1.299)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphone13.webp" alt="iphone 13">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>iPhone 13</h2>
+                        <p>512GB Tela de 6,1", 5G e Câmera Dupla de 12 MP - Verde</p>
+                        <p>De <s>R$ 4.799,00</s> Por</p>
+                        <span><strong>R$ 4.300,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('iPhone 13 Apple (512GB) Verde', 4.300)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/iphone13verm.webp" alt="iphone 13">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>iPhone 13</h2>
+                        <p>512GB Tela de 6,1", 5G e Câmera Dupla de 12MP Vermelho</p>
+                        <p>De <s>R$ 4.799,00</s> Por</p>
+                        <span><strong>R$ 4.299,00</strong></span>
+                        <button
+                            onclick="adicionarAoCarrinho('iPhone 13 Apple (512GB) Vermelho', 4.299)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/galaxyZFilip.png" alt="galaxy z flip7">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Galaxy Z Flip7</h2>
+                        <p>512GB 12GB RAM 6.9" Câmera Dupla 50MP, Galaxy AI Azul</p>
+                        <p>De <s>R$ 7.799,00</s> Por</p>
+                        <span><strong>R$ 7.400</strong></span>
+                        <button onclick="adicionarAoCarrinho('Celular Samsung Galaxy Z Flip7', 7.400)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/smartphones/galaxyS251.png" alt="galaxy s25">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Galaxy S25 Ultra</h2>
+                        <p>256GB, 12GB RAM, Tela Grande de 6.9", Titânio Preto</p>
+                        <p>De <s>R$ 10.799,00</s> Por</p>
+                        <span><strong>R$ 10.199</strong></span>
+                        <button onclick="adicionarAoCarrinho('Samsung Galaxy S25', 10.199)">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="grade">
+            <h2>Notebooks</h2>
+            <div class="secao-cards">
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/note-acerNitro.webp" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Gamer Acer Nitro</h2>
+                        <p>ANV15-51-7037 i7 13ªGen Linux Gutta 16GB 512GB SSD RTX4050</p>
+                        <p>de <s>R$ 6.499,00</s> Por</p>
+                        <span><strong>R$ 5.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Gamer Acer Nitro', 5.999)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/dell2.png" alt="Notebook dell">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Dell Inspiron 15 </h2>
+                        <p>Intel Core i5 16GB RAM SSD 1TB 15,6" Full HD Windows 11 12MB</p>
+                        <p>De <s>R$ 4.599,00</s> Por</p>
+                        <span><strong>R$ 4.139,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Dell', 4.139)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/notacer.jpg" alt="notebook acer">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Acer Aspire 15</h2>
+                        <p>Geração, 8GB RAM, 512GB SSD, 15.6" FHD LED, 60Hz, Win11 Home, Cinza Aço - NX.J1QAL.002</p>
+                        <p>De <s>R$ 3.899,00</s> Por</p>
+                        <span><strong>R$ 3.200,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Acer Aspire 15', 3.200)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/macbook.png" alt="macbook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>MacBook Air Apple 13"</h2>
+                        <p>Chip M4, CPU 10 Núcleos, GPU 8 Núcleos, Neural Engine 16 Núcleos, 16GB RAM, SSD 256GB, Meia-noite - MW123BZ/A</p>
+                        <p>De <s>R$ 9.899,00</s> Por</p>
+                        <span><strong>R$ 9.199,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('MacBook Air Apple 13', 9.199)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/note-Hpp.png" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook HP 256R G9 </h2>
+                        <p>Intel Core i3 1315U 8GB 256GB 15,6” Windows 11 Intel UHD Graphics BQ9K8AT#AK4</p>
+                        <p>De <s>R$ 2.699,00</s> Por</p>
+                        <span><strong>R$ 2.300,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook HP', 2.300)">Comprar</button>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/note-asus.webp" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook ASUS Vivobook 15</h2>
+                        <p>Intel Core i5 1334U, 8 GB RAM, 512 GB SSD, Tela 15.6" FHD</p>
+                        <p>De <s>R$ 3.299,00</s> Por</p>
+                        <span><strong>R$ 2.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook ASUS Vivobook 15', 2.999)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/note2.png" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Lenovo</h2>
+                        <p>IdeaPad 1i Intel Core i7 12GB RAM - 512GB SSD 15,6” Windows 11 82VY000PBR</p>
+                        <p>De <s>R$ 4.599,00</s> Por</p>
+                        <span><strong>R$ 3.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Lenovo', 3.999)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/asus-games.webp" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Gamer ASUS</h2>
+                        <p>TUF Gaming A15, AMD RYZEN 7, 16GB RAM, 512GB SSD, RTX 2050, 15,6" FHD, Preto Grafite</p>
+                        <p>De <s>R$ 5.899,00</s> Por</p>
+                        <span><strong>R$ 5.299,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Gamer ASUS', 5.299)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/not-sam-book.webp" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Samsung Book</h2>
+                        <p>Intel Core i3, 8GB RAM, 256GB, Windows 11, Cinza Chumbo</p>
+                        <p>De <s>R$ 4.998,00</s> Por</p>
+                        <span><strong>R$ 4.300,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Samsung Book', 4.300)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/notebooks/not-positivo.webp" alt="notebook">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Notebook Positivo</h2>
+                        <p>Vision R15 AMD Ryzen 7-5700U Linux 32GB RAM 512GB SSD IPS Full HD 15.6” Lumina Bar - Preto</p>
+                        <p>De <s>R$ 3.899,00</s> Por</p>
+                        <span><strong>R$ 3.199.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Notebook Positivo', 3.199)">Comprar</button>
+                    </div>
+                </div>
+            </div>   
+        </section>
+         <section class="grade">
             <h2>Tv e Video</h2>
             <div class="secao-cards">
                 <div class="card">
-                    <img src="img/tv-samsung.webp" alt="arroz">
+                    <div class="caixa-img">
+                        <img src="img/tvs/tv-samsung.png" alt="smart tv">
+                    </div>
                     <div class="texto-produto">
-                        <h2>Smart TV HD LED 32”</h2>
+                        <h2>Smart TV HD LED 32</h2>
                         <p>Samsung T4300 - Wi-Fi HDR 2 HDMI 1 USB</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/tv-tcl.webp" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Smart TV 32” </h2>
-                        <p>Full HD LED TCL 32S5400A Android - Wi-Fi Bluetooth</p>
-                        <span><strong>R$ 11.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 11.999)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/camera.webp" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Câmera Sport Ultra</h2>
-                        <p>HD 4K Wifi para Aventura e Filmagens</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/playsttation.webp" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>PlayStation 5</h2>
-                        <p>Pro 2024 2TB 1 Controle Branco Sony</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/xbox.webp" alt="arroz">
-                    <div class="texto-produto">
-                        <h2>Console 360</h2>
-                        <p>Super Slim 4GB + 1 Jogo</p>
-                        <span><strong>R$ 5.999</strong></span>
-                        <button onclick="adicionarAoCarrinho('Arroz Tio joão 1kg', 5.99)">Compre Agora</button>
+                        <p>De <s>R$ 1.799,00</s> Por</p>
+                        <span><strong>R$ 1.299,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV HD LED 32', 5.99)">Compre Agora</button>
                     </div>
                 </div>
 
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/tv-aoc.webp" alt="tv smart">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Smart TV 43 </h2>
+                        <p>Full HD DLED AOC 43S5045/78G VA Wi-Fi 3 HDMI 1 USB</p>
+                        <p>De <s>R$ 1.999,00</s> Por</p>
+                        <span><strong>R$ 1.599,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV 43', 1.599)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/smart-tv85.webp" alt="smart tv">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Smart TV 85"</h2>
+                        <p>4K UHD QLED Mini LED TCL 85C755 120Hz Wi-Fi Bluetooth 4 HDMI 2 USB</p>
+                        <p>De <s>R$ 12.299,00</s> Por</p>
+                        <span><strong>R$ 11.679,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV 85', 11.679)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/tvsamrt-samsung.png" alt="smart tv">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Smart TV HD LED 32</h2>
+                        <p>Samsung T4300 - Wi-Fi HDR 2 HDMI 1 USB</p>
+                        <p>De <s>R$ 1.999,00</s> Por</p>
+                        <span><strong>R$ 1.679,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV HD LED 32', 1.679)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/tv-lg65p.webp" alt="smart tv">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Smart TV 4K LG</h2>
+                        <p>65 Polegadas QNED 65QNED80T</p>
+                        <p>De <s>R$ 5.399,00</s> Por</p>
+                        <span><strong>R$ 4.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV 4K LG<', 4.999)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/tv-pilco.png" alt="tv smart">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Smart TV 32</h2>
+                        <p>Philco PTV32G7PR2CGB Roku TV LED Dolby Áudio</p>
+                        <p>De <s>R$ 1.199,00</s> Por</p>
+                        <span><strong>R$ 999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('tv smart 32 pilco', 999.00)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/tv-tcl.png" alt="smart tv">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Smart TV 32</h2>
+                        <p>Full HD LED TCL 32S5400A Android - Wi-Fi Bluetooth</p>
+                        <p>De <s>R$ 2.399,00</s> Por</p>
+                        <span><strong>R$ 1.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Smart TV 32<', 1.999)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/camm.webp" alt="camera">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Câmera Digital </h2>
+                        <p>Qonioi 16MP - 720P - Zoom Digital 16x - Tela LCD 2,4"</p>
+                        <p>De <s>R$ 699,00</s> Por</p>
+                        <span><strong>R$ 630.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Câmera Digital', 630.00)">Compre Agora</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/camera.webp" alt="camera">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Câmera Sport Ultra</h2>
+                        <p>HD 4K Wifi para Aventura e Filmagens</p>
+                        <p>De <s>R$ 699,00</s> Por</p>
+                        <span><strong>R$ 299.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Câmera Sport Ultra', 299.00)">Compre Agora</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/tvs/monitorr.png" alt="monitor">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Monitor Curvo LG</h2>
+                        <p>Smart 34SR60QC-B 34", Air Play, USB e HDMI, Bluetooth, Preto - 34SR60QC-B.AWZM</p>
+                        <p>De <s>R$ 2.400,00</s> Por</p>
+                        <span><strong>R$ 1.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Monitor curvo LG', 1.999)">Compre Agora</button>
+                    </div>
+                </div>
+        </section>
+
+        <section class="grade">
+            <h2>Eletrodomésticos</h2>
+            <div class="secao-cards">
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/maq-eletrolux.webp" alt="maquina de lavar">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Máquina de Lavar Electrolux 15Kg</h2>
+                        <p>Essential Care (LED15) possui Cesto Inox</p>
+                        <p>De <s>R$ 2.299,00</s> Por</p>
+                        <span><strong>R$ 1.999,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Maquina Eletrolux', 1.999)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/cooktop.webp" alt="cooktop">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Cooktop Electrolux</h2>
+                        <p>5 Bocas a Gás Mesa Vidro</p>
+                        <p>De <s>R$ 1.499,00</s> Por</p>
+                        <span><strong>R$ 999.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('cooktop', 999.00)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/microondas.webp" alt="micro-ondas">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Micro-ondas Electrolux 20L</h2>
+                        <p>Inox Espelhado com Função Tira Odor</p>
+                        <p>De <s>R$ 999,00</s> Por</p>
+                        <span><strong>R$ 599,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('micro-ondas', 599.00)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/lava-louca.webp" alt="lava louças">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Lava-Louças Electrolux</h2>
+                        <p>Preta Experience com Função Higienizar</p>
+                        <p>De <s>R$ 4.699,00</s> Por</p>
+                        <span><strong>R$ 4.199,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Lava-Louças Eletrolux', 4.199)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/geladeira.webp" alt="geladeira">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Geladeira Electrolux</h2>
+                        <p>Frost Free 480L Efficient AutoSense</p>
+                        <p>De <s>R$ 7.199,00</s> Por</p>
+                        <span><strong>R$ 6.899,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Geladeira Eletrolux', 5.99)">Comprar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/efray.webp" alt="Airfryer">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Fritadeira Air Fryer</h2>
+                        <p>5,5L Cyclone Preto e Inox Midea</p>
+                        <p>De <s>R$ 799,00</s> Por</p>
+                        <span><strong>R$ 550,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Air Fryer', 550.00)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/ferro.webp" alt="ferro de passar">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Ferro de Passar Roupa</h2>
+                        <p>Mondial a Seco FSN-55-B - Preto</p>
+                        <p>De <s>R$ 99,00</s> Por</p>
+                        <span><strong>R$ 79.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Ferro de Passar Roupa', 79.00)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/liquid.webp" alt="Liquidificador">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Liquidificador Mondial</h2>
+                        <p>Turbo Power L-99 FB Preto com Filtro 3 Velocidades 550W</p>
+                        <p>De <s>R$ 159,00</s> Por</p>
+                        <span><strong>R$ 99.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Liquidificador Mondial', 99.00)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/frigobar.webp" alt="Frigobar">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Frigobar Brastemp</h2>
+                        <p>Retrô 76 Litros Classic Black - BRA08HE</p>
+                        <p>De <s>R$ 1899,00</s> Por</p>
+                        <span><strong>R$ 1.699,00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Frigobar Brastemp', 1.699)">Comprar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="caixa-img">
+                        <img src="img/eletrodomesticos/purificador.webp" alt="purificador">
+                    </div>
+                    <div class="texto-produto">
+                        <h2>Purificador de Água</h2>
+                        <p>Midea de Mesa e Parede</p>
+                        <p>De <s>R$ 899,00</s> Por</p>
+                        <span><strong>R$ 600.00</strong></span>
+                        <button onclick="adicionarAoCarrinho('Purificador de Água', 600.00)">Comprar</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -438,14 +919,14 @@
 
     </div>
 
-    <div class="card-cep" id="card-cep">
-        <div class="buscar-cep">
+    <div class="fundo-cep" id="fundo-cep">
+        <div class="card-cep">
             <button class="botao-fechar-cep" onclick="fecharCep()">X</button>
             <div class="form-cep" action="">
                 <h2>Sua localizacão</h2>
-                <label for="">Informe seu Cep</label>
-                <input type="number" placeholder="Qual seu cep?">
-                <button class="botao-buscar-cep">Buscar</button>
+                <input type="number" placeholder="Qual seu cep?" id="txt-cep">
+                <button class="botao-buscar-cep" onclick="buscarCep()">Buscar</button>
+                <div id="res" style="padding: 10px;"></div>
             </div>
         </div>
     </div>
