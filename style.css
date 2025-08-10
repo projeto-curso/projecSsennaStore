@@ -13,8 +13,8 @@ body {
 
 header {
     display: flex;
-    /* background-color: #dfdada85; */
-    background-color: rgba(106, 132, 158, 0.411);
+    background-color: #dfdada85;
+    /* background-color: rgba(106, 132, 158, 0.411); */
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.068);
     border-bottom: 5px solid rgba(0, 0, 0, 0.678);
@@ -428,6 +428,7 @@ button {
     height: 200px;
     width: 100%;
     /* background-color: rgba(220, 20, 60, 0.432); */
+    
 }
 
 .caixa-img > img {
@@ -436,6 +437,7 @@ button {
     margin-top: 5px;
     border-radius: 5px;
     background: none;
+    
 
 }
 
@@ -469,6 +471,7 @@ button {
     font-family: 'Poppins', sans-serif;
     margin-top: 5px;
     color: rgba(2, 2, 58, 0.76);
+    
 
 }
 
@@ -515,6 +518,7 @@ footer {
     gap: 10px;
     padding: 10px;
     flex-wrap: wrap;
+    
 
     a {
         padding: 8px;
@@ -1084,7 +1088,7 @@ footer {
 
     .card {
         flex-direction: row;
-        width: 100%;
+        width: 400px;
         height: 210px;
         align-items: center;
         justify-content: center;
@@ -1110,6 +1114,7 @@ footer {
 
         img {
             width: 100px;
+           
         }
         
 
@@ -1132,14 +1137,14 @@ footer {
     /* background: linear-gradient(135deg, #c2c2c2, #c2c2c2); */
     color: rgba(0, 0, 0, 0.87);
     text-align: center;
-    padding: 40px 20px;
+    padding-top: 40px;
     border-radius: 12px;
     /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.438); */
 }
 
 .banner-ofertas h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
 .banner-ofertas p {

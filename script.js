@@ -4,7 +4,7 @@ function mostrarMenu() {
 
  const itemMenu = [
   { nome: 'Smartphones', link: 'smartphones.html' },
-  { nome: 'Tablet', link: 'tablet.html' },
+  { nome: 'Tablets', link: 'tablets.html' },
   { nome: 'Notebooks', link: 'notebooks.html' },
   { nome: 'Games', link: 'games.html' },
   { nome: 'Informatica', link: 'informatica.html' },
