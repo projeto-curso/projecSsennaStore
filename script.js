@@ -8,6 +8,7 @@ function mostrarMenu() {
   { nome: 'Notebooks', link: 'notebooks.html' },
   { nome: 'Games', link: 'games.html' },
   { nome: 'Informatica', link: 'informatica.html' },
+  { nome: 'Drones', link: 'drones.html' },
   { nome: 'Eletrodomésticos', link: 'eletrodomesticos.html' },
   { nome: 'Salão', link: 'salao.html' },
   { nome: 'Tv e Video', link: 'tv-video.html' },
